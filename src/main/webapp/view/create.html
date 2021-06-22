@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm mới </title>
+</head>
+<body>
+
+<h1>Điền đầy đủ thông tin vào Form</h1>
+
+<th:block th:if="${mesage}">
+    <P th:text="${mesage}"></P>
+</th:block>
+<form action="" method="post" th:object="${customer}">
+    <div>
+        <label>Name</label><br>
+        <input type="text" th:field="*{name}">
+    </div>
+    <div>
+        <label>Age</label><br>
+        <input type="text" th:field="*{age}">
+    </div>
+    <div>
+        <button type="submit">Save</button>
+    </div>
+
+</form>
+
+</body>
+</html>

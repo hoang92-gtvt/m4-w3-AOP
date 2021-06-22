@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<table border="1 solid" width="40%">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td th:text="${customer.get().name}"></td>
+        <td th:text="${customer.get().age}"></td>
+    </tr>
+
+
+</table>
+
+<p>...................</p>
+<form action="" method="post" th:object="${customer1}">
+    <div>
+        <label>Name</label><br>
+        <input type="text" th:field="*{name}">
+    </div>
+    <div>
+        <label>Age</label><br>
+        <input type="text" th:field="*{age}">
+    </div>
+    <div>
+        <button type="submit">Save</button>
+    </div>
+
+</form>
+
+</body>
+</html>

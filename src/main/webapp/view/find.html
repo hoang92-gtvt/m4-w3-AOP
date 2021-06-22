@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin</title>
+</head>
+<body>
+<h1>Thông tin khách hàng</h1>
+<table border="1 solid" width="40%">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+        <tr>
+            <td th:text="${customer.get().name}"></td>
+            <td th:text="${customer.get().age}"></td>
+        </tr>
+
+
+</table>
+
+</body>
+</html>

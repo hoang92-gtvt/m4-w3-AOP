@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dánh sách </title>
+</head>
+<body>
+<h1>Danh Sách Khách hàng</h1>
+<table border="1 solid" width="40%">
+     <tr>
+         <th>Name</th>
+         <th>Age</th>
+         <th colspan="2">Action</th>
+     </tr>
+    <th:block th:each="C:${customer}">
+        <tr>
+            <td th:text="${C.name}"></td>
+            <td th:text="${C.age}"></td>
+            <td><a th:href="@{Remove(id = ${C.id})}">Remove</a></td>
+            <td><a th:href="@{Update(id = ${C.id})}">Update</a></td>
+        </tr>
+    </th:block>
+
+</table>
+</body>
+</html>
